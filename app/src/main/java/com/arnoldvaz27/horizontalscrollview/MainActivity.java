@@ -1,11 +1,11 @@
-package com.example.differentandroidcodes;
+package com.arnoldvaz27.horizontalscrollview;
+
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,11 +28,6 @@ public class MainActivity extends AppCompatActivity {
         imageView2.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Third Image In Horizontal Scroll View", Toast.LENGTH_SHORT).show());
 
         //In this i have used lambda expression and normal expression to define the onClick function.
-        imageView3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Fourth Image In Horizontal Scroll View", Toast.LENGTH_SHORT).show();
-            }
-        });
+        imageView3.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Fourth Image In Horizontal Scroll View", Toast.LENGTH_SHORT).show());
     }
 }
